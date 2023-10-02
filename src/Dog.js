@@ -1,3 +1,4 @@
+import "./Dog.css";
 /**
  * Dog: Renders individual dog details
  *
@@ -8,7 +9,7 @@
  */
 function Dog({ dog }) {
   return (
-    <div>
+    <div className="Dog">
       <h3>{dog.name}</h3>
       <p>Age: {dog.age}</p>
       <img alt={dog.name} src={`/${dog.src}.jpg`} />

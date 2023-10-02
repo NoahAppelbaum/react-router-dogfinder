@@ -10,10 +10,8 @@ import Dog from "./Dog";
  * RoutesList->DogDetails->Dog
  */
 function DogDetails({ dogs }) {
-  console.log("PARAMS:", useParams());
   const { name } = useParams();
   const dog = dogs.find(d => name.toLowerCase() === d.name.toLowerCase());
-  console.log("FOUND DOG:", dog);
   return (
     <Dog dog={dog} />
   );

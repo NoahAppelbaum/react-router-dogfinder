@@ -3,8 +3,7 @@ import getDogs from "./utils";
 import { BrowserRouter } from "react-router-dom";
 import Nav from "./Nav";
 import RoutesList from "./RoutesList";
-
-
+import { v4 as uuid } from "uuid";
 /**DogFinderApp: Logical parent component for App
  *
  * state:
@@ -22,7 +21,7 @@ function DogFinderApp() {
     console.log("making dog list");
 
     const newDogs = await getDogs();
-    setDogs(newDogs);
+    setDogs(newDogs.map(d => ({ ...d, id: uuid() })));
 
     console.log("Got dogs!?", dogs);
   }

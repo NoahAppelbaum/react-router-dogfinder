@@ -11,7 +11,7 @@ import Dog from "./Dog";
 function DogList({ dogs }) {
   return (
     <div>
-      {dogs.map(d => <Dog dog={d} key={d.name} />)}
+      {dogs.map(d => <Dog dog={d} key={d.id} />)}
     </div>
   );
 }
