@@ -1,0 +1,1 @@
+//Take in props {dogs}
