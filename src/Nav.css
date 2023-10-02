@@ -1,0 +1,7 @@
+.Nav a {
+  margin: 5px;
+}
+
+.Nav a.active {
+  color: aquamarine;
+}

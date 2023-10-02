@@ -1,6 +1,13 @@
 import Dog from "./Dog";
 
-//FIXME: figure out solution for keys later
+/**
+ * DogList: Displays all dogs
+ *
+ * props:
+ * - dogs: [{dog info}, ...]
+ *
+ * RoutesList->DogList->Dog
+ */
 function DogList({ dogs }) {
   return (
     <div>

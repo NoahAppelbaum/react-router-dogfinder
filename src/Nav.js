@@ -1,11 +1,18 @@
 import { NavLink } from "react-router-dom";
+import "./Nav.css"
 /**
- * Renders Navbar with dog names as links
+ * Nav: Renders Navbar with dog names as links
+ *
+ * props:
+ * - dogNames: [name, ...]
+ *
+ * DogFinderApp->Nav
  */
 function Nav({ dogNames }) {
   return (
     <div className="Nav">
-      {dogNames.map(d => <NavLink to={`/dogs/${d}`} > {d}</NavLink>)}
+      <NavLink to={"/"}>Home</NavLink>
+      {dogNames.map(d => <NavLink key={d} to={`/dogs/${d}`} > {d}</NavLink>)}
     </div>
   );
 }
